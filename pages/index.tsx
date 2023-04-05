@@ -1,13 +1,21 @@
-import styles from "@/styles/Home.module.scss";
+import React from "react";
+import Hero_image from "@/components/index/Parallax_image";
+import Text_hello from "@/components/index/Text_hello";
+import About from "@/components/index/About";
 import Meta from "@/components/Meta";
+import EarthImg from "@/public/img/earth2.webp";
+import Rocket from "@/components/index/Rocket";
 
-export default function Home() {
+export default function Home(): JSX.Element {
+  const mainText = "Hello!  \nI am JiHoon.  \nWelcome to my world!";
+
   return (
     <>
-      <Meta title='Home' name='description' description='This is the home page' />
-      <div className={styles.home}>
-        <p>잠깐만 폰트 테스트</p>
-      </div>
+      <Meta title='Home' name='portfolio' description="Johnny's portfolio" />
+      <Hero_image image={EarthImg} alt={"main visual image"} translateY={[-30, 70]} item={"styles"} />
+      <Rocket />
+      <Text_hello text={mainText} />
+      <About />
     </>
   );
 }

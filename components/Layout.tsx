@@ -1,27 +1,24 @@
 import styles from "@/styles/Layout.module.scss";
-import Link from "next/link";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <nav className={styles.nav}>
-        <ul className={styles.nav__list}>
-          <li className={styles.nav__item}>
-            <Link href='/about'>어바웃</Link>
-          </li>
-          <li className={styles.nav__item}>스킬</li>
-          <li className={styles.nav__item}>프로젝트</li>
-          <li className={styles.nav__item}>컨택트</li>
-        </ul>
-      </nav>
-      <div className={styles.container}>{children}</div>
-      <footer className={styles.footer}></footer>
+      <div className={styles.bg__wrapper}>
+        <Header />
+        <div className={styles.stars__wrapper}>
+          <div className={styles.stars1} />
+          <div className={styles.stars2} />
+          <div className={styles.stars3} />
+        </div>
+        <main className={styles.container}>{children}</main>
+        <Footer />
+      </div>
     </>
   );
-};
-
-export default Layout;
+}

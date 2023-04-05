@@ -1,0 +1,21 @@
+.footer__social {
+  display: flex;
+  margin: 0 -5px;
+  .item {
+    padding: 0 10px;
+    a {
+      .github {
+        width: 4vw;
+        fill: #fff;
+      }
+      .notion {
+        width: 4vw;
+        fill: #fff;
+      }
+      .codePen {
+        width: 4vw;
+        fill: #fff;
+      }
+    }
+  }
+}

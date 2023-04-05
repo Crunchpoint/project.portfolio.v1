@@ -85,11 +85,11 @@ video {
   word-break: keep-all;
   vertical-align: baseline;
   font-size: 100%;
-  font-family: var(--font-pretendard);
+  // font-family: "myFont";
 }
 input,
 textarea {
-  font-family: var(--font-pretendard);
+  // font-family: serif
 }
 a {
   text-decoration: none;
@@ -138,7 +138,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-pretendard);
+  // font-family: serif
 }
 select {
   border: none;
@@ -147,7 +147,14 @@ select {
 }
 * {
   box-sizing: border-box;
+  color: #fff;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  scroll-behavior: smooth;
 }
-// body {
-//   background: #0a0a0a;
-// }
+body {
+  background: #0a0a0a;
+}

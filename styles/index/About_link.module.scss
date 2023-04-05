@@ -1,0 +1,17 @@
+.link__to {
+  padding: 30vh 0 0;
+  a {
+    svg {
+      &:hover .path {
+        opacity: 1;
+        // stroke-width: 1px;
+      }
+      .path {
+        stroke: #fff;
+        stroke-width: 0.7px;
+        transition: opacity 0.25s linear;
+        opacity: 0.6;
+      }
+    }
+  }
+}

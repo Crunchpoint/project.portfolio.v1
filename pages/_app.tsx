@@ -1,7 +1,9 @@
 import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import Context from "@/components/context/Context";
+import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
+import { ParallaxProvider } from "react-scroll-parallax";
 import "@/styles/globals.scss";
 
 const myFont = localFont({
@@ -18,13 +20,28 @@ const myFont = localFont({
   ],
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+const montserrat = Montserrat({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
+// it can be used in return like this:
+/* <style jsx global>{`
+        html {
+          font-family: ${montserrat.style.fontFamily};
+        }
+      `}</style> */
+
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <Context>
-      <div className={myFont.className}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+      <div className={montserrat.className}>
+        <ParallaxProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ParallaxProvider>
       </div>
     </Context>
   );
