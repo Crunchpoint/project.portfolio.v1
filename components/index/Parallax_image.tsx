@@ -25,7 +25,7 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
   const [count, setCount] = React.useState(0);
 
   useEffect(() => {
-    isClick && setCount(count + 1);
+    isClick && setCount((count) => count + 1);
   }, [isClick]);
 
   useEffect(() => {
