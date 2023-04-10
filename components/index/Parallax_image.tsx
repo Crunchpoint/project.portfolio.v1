@@ -13,6 +13,7 @@ interface Hero_imageProps {
   translateY?: [number, number];
   item?: string;
 }
+
 const indie = Indie_Flower({
   weight: ["400"],
   subsets: ["latin"],
@@ -21,6 +22,11 @@ const indie = Indie_Flower({
 export default function Hero_image({ image, alt, speed, translateY, item }: Hero_imageProps): JSX.Element {
   const styles = item === "styles2" ? styles2 : styles1;
   const [isClick, setIsClick] = React.useState(false);
+  const [count, setCount] = React.useState(0);
+
+  useEffect(() => {
+    isClick && setCount(count + 1);
+  }, [isClick]);
 
   useEffect(() => {
     let tiemeOut = setTimeout(() => {
@@ -29,11 +35,15 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
     return () => clearTimeout(tiemeOut);
   }, [isClick]);
 
+  function isMultipleOfFive(count: number) {
+    return count % 5 === 0 && count !== 0;
+  }
+
   return (
     <section className={styles.image__wrapper}>
       <Parallax speed={speed} translateY={translateY}>
-        <figure onClick={() => setIsClick(!isClick)} data-isclick={isClick}>
-          <Image src={image} alt={alt} placeholder='empty' />
+        <figure data-count={count}>
+          <Image src={image} alt={alt} placeholder='empty' onClick={() => setIsClick(!isClick)} data-isclick={isClick} />
           {item === "styles2" && (
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'>
@@ -48,7 +58,15 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
                   />
                 </g>
               </svg>
-              {isClick ? <figcaption className={indie.className}>wooooahhh~!</figcaption> : <figcaption className={indie.className}>It&apos;s not me!</figcaption>}
+              {isMultipleOfFive(count) ? (
+                <figcaption className={indie.className}>aghhh! &nbsp;&nbsp;&nbsp;&nbsp;</figcaption>
+              ) : isClick ? (
+                <figcaption className={indie.className}>wooooahhh~!</figcaption>
+              ) : (
+                <figcaption className={indie.className}>
+                  It&apos;s not me! <span>please do not click</span>
+                </figcaption>
+              )}
             </motion.div>
           )}
         </figure>

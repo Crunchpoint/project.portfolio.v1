@@ -1,0 +1,28 @@
+.among {
+  position: absolute;
+  top: 50%;
+  figure {
+    width: 2vw;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      translate: -2vw 0;
+      animation: rotate 30s linear infinite;
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    translate: -2vw 0;
+    transform: rotate(0deg);
+  }
+  80% {
+    translate: 102vw -30vh;
+    transform: rotate(720deg);
+  }
+  100% {
+    translate: 102vw -30vh;
+    transform: rotate(720deg);
+  }
+}

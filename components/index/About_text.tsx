@@ -3,9 +3,9 @@ import styles from "@/styles/index/About_text.module.scss";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import YogaImg from "@/public/img/yoga.gif";
-import FlowerImg from "@/public/img/website.gif";
-import TogetherImg from "@/public/img/together4.gif";
+import YogaImg from "@/public/img/index/yoga.gif";
+import FlowerImg from "@/public/img/index/website.gif";
+import TogetherImg from "@/public/img/index/together4.gif";
 
 interface About_textProps {
   text: string;

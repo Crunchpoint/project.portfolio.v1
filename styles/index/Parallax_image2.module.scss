@@ -6,33 +6,56 @@
     position: relative;
     width: 8vw;
     transform: scaleX(-1);
-    &[data-isclick="true"] img {
-      rotate: 360deg;
-      transform-origin: center center;
-      transition: rotate 0.5s linear;
+    overflow: visible;
+    &:hover {
+      filter: drop-shadow(0 0 0.2rem #fff);
+    }
+    @for $i from 1 through 100 {
+      $multiple: $i * 5;
+      &[data-count="#{$multiple}"] {
+        animation: play 0.9s steps(1, end) 1;
+      }
+      &[data-count="#{$multiple}"] img {
+        opacity: 0;
+      }
     }
     img {
+      clip-path: inset(1px);
       width: 100%;
       height: 100%;
       will-change: transform;
+      cursor: pointer;
       animation: up_down 10s linear infinite alternate;
+      &[data-isclick="true"] {
+        rotate: 360deg;
+        transform-origin: center center;
+        transition: rotate 0.5s linear;
+      }
     }
-    figcaption {
-      position: absolute;
-      font-size: 2em;
-      top: -120px;
-      left: -100px;
-      will-change: transform;
-      animation: up_down2 10s linear infinite alternate;
-    }
-    svg {
-      position: absolute;
-      top: -65px;
-      left: 20px;
-      width: 70px;
-      fill: #fff;
-      will-change: transform;
-      animation: up_down3 10s linear infinite alternate;
+    div {
+      figcaption {
+        position: absolute;
+        font-size: 2em;
+        top: -120px;
+        left: -100px;
+        will-change: transform;
+        animation: up_down2 10s linear infinite alternate;
+        span {
+          text-align: center;
+          display: block;
+          font-size: 0.5em;
+          color: #fff;
+        }
+      }
+      svg {
+        position: absolute;
+        top: -65px;
+        left: 20px;
+        width: 70px;
+        fill: #fff;
+        will-change: transform;
+        animation: up_down3 10s linear infinite alternate;
+      }
     }
   }
 }
@@ -69,5 +92,14 @@
 @keyframes rotate {
   to {
     rotate: 360deg;
+  }
+}
+@keyframes play {
+  0% {
+    // background: url("../../public/img/index/boom.gif") no-repeat center center / cover;
+    background: url("../../public/img/index/boom.gif") no-repeat center center / cover;
+  }
+  100% {
+    background: none;
   }
 }

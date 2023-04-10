@@ -12,12 +12,13 @@
       font-size: 1.75vw;
       line-height: 2;
       letter-spacing: 1px;
-      font-weight: 500;
+      font-weight: 400;
       display: block;
       white-space: pre-wrap;
+      font-style: italic;
       &[data-isDone="true"] span {
         font-size: 1.1em;
-        font-weight: 700;
+        font-weight: 600;
         background-position: 0 100%;
       }
       &[data-isDone="false"] span {
@@ -26,14 +27,13 @@
         background: none;
       }
       span {
-        background: linear-gradient(to right, rgb(255, 248, 175) 50%, rgb(255, 255, 255) 50%);
+        background: linear-gradient(to right, rgb(254, 248, 187) 50%, #f5f2eb 50%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-size: 200% 100%;
         background-position: 100%;
         transition: background-position 2s ease-in-out, font-size 0.5s ease-in-out;
-        text-decoration: none;
         display: inline-block;
       }
     }

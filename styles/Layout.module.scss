@@ -1,84 +1,11 @@
-// n is number of stars required
-@function multiple-box-shadow($n) {
-  $value: "#{random(2000)}px #{random(2000)}px #FFF";
-  @for $i from 2 through $n {
-    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
-  }
-  @return unquote($value);
-}
-
-$shadows-small: multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big: multiple-box-shadow(100);
-
 .bg__wrapper {
-  .stars__wrapper {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    .stars1 {
-      width: 1px;
-      height: 1px;
-      background: transparent;
-      box-shadow: $shadows-small;
-      animation: animStar 50s linear infinite;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 2000px;
-        width: 1px;
-        height: 1px;
-        background: transparent;
-        box-shadow: $shadows-small;
-      }
-    }
-    .stars2 {
-      width: 2px;
-      height: 2px;
-      background: transparent;
-      box-shadow: $shadows-medium;
-      animation: animStar 100s linear infinite;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 2000px;
-        width: 2px;
-        height: 2px;
-        background: transparent;
-        box-shadow: $shadows-medium;
-      }
-    }
-    .stars3 {
-      width: 3px;
-      height: 3px;
-      background: transparent;
-      box-shadow: $shadows-big;
-      animation: animStar 150s linear infinite;
-      &:after {
-        content: "";
-        position: absolute;
-        top: 2000px;
-        width: 3px;
-        height: 3px;
-        background: transparent;
-        box-shadow: $shadows-big;
-      }
-    }
-  }
-}
-
-.container {
-  padding: 8.3333333333vw 0 0;
-  position: relative;
-  width: 100%;
-}
-
-@keyframes animStar {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-2000px);
+  // background-color: #0a0a0a;
+  // &[data-theme="/projects"] {
+  //   background-color: #6dd3e7;
+  // }
+  .container {
+    padding: 8.3333333333vw 0 0;
+    position: relative;
+    width: 100%;
   }
 }

@@ -1,17 +1,27 @@
 .link__to {
   padding: 30vh 0 0;
-  a {
-    svg {
-      &:hover .path {
-        opacity: 1;
-        // stroke-width: 1px;
-      }
-      .path {
-        stroke: #fff;
-        stroke-width: 0.7px;
-        transition: opacity 0.25s linear;
-        opacity: 0.6;
-      }
+  // a {
+  svg {
+    // transition: viewBox 10s linear;
+    &:hover .path {
+      stroke-opacity: 1;
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: dash 1s ease-in-out forwards;
     }
+    .path {
+      stroke: #f5f2eb;
+      fill: none;
+      stroke-width: 0.7px;
+      stroke-opacity: 0.6;
+      transition: stroke-opacity 0.25s linear;
+    }
+  }
+  // }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }

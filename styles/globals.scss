@@ -151,10 +151,15 @@ select {
   user-select: none;
   -webkit-font-smoothing: antialiased;
   ::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
   scroll-behavior: smooth;
 }
-body {
-  background: #0a0a0a;
+
+body:has([data-theme="/"]),
+body:has([data-theme="/projects"]) {
+  background-color: #0a0a0a;
+  &:has([data-theme="/projects"]) {
+    background-color: #6dd3e7;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Spaceship from "@/public/img/rocket.webp";
-import Spaceship_end from "@/public/img/rocket_end.webp";
+import Spaceship from "@/public/img/index/rocket.webp";
+import Spaceship_end from "@/public/img/index/rocket_end.webp";
 import styles from "@/styles/index/Rocket.module.scss";
 import { useParallax } from "react-scroll-parallax";
 import { useContext, useEffect, useState } from "react";
