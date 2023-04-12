@@ -11,7 +11,7 @@
   padding: 1.5rem 3.3333333333vw 0;
   a {
     .header__logo {
-      width: 10vw;
+      width: 7vw;
       height: auto;
     }
   }
@@ -19,11 +19,13 @@
     .nav__trigger {
       position: relative;
       border: none;
-      margin-left: 4.1666666667vw;
+      margin-left: 3.2vw;
+      // margin-left: 4.1666666667vw;
       cursor: pointer;
       span {
         display: block;
-        font-size: 4.1666666667vw;
+        font-size: 3.2vw;
+        // font-size: 4.1666666667vw;
         line-height: 1.05;
         letter-spacing: -0.04em;
         font-weight: 500;

@@ -43,7 +43,7 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
     <section className={styles.image__wrapper}>
       <Parallax speed={speed} translateY={translateY}>
         <figure data-count={count}>
-          <Image src={image} alt={alt} placeholder='empty' onClick={() => setIsClick(!isClick)} data-isclick={isClick} />
+          <Image src={image} alt={alt} placeholder='empty' onClick={() => setIsClick(!isClick)} data-isclick={isClick} priority />
           {item === "styles2" && (
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'>
