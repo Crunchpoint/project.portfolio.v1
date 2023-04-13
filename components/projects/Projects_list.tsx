@@ -1,9 +1,7 @@
 import styles from "@/styles/projects/Projects_list.module.scss";
-import Image from "next/image";
-import AstronautImg from "@/public/img/index/among_red.png";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +11,7 @@ export default function Projects_list() {
   useEffect(() => {
     const ctx = gsap.context((self) => {
       if (undefined !== self.selector) {
-        const boxes = self.selector(".box");
+        // const boxes = self.selector(".box");
         // forEach loop (method)
         // boxes.forEach((box: HTMLElement, key: number) => {
         //   gsap.to(box, {
@@ -27,15 +25,14 @@ export default function Projects_list() {
         //       scrub: true,
         //     },
         //   });
-        // });
-
+        // });`
         gsap.to(".item_wrapper", {
           rotateY: -360,
           ease: "none",
           scrollTrigger: {
             trigger: ".item_wrapper",
-            start: "top 40%",
-            end: "bottom 0",
+            start: "top 50%",
+            end: "bottom -30%",
             scrub: true,
           },
         });

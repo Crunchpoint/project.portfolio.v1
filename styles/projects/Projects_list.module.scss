@@ -1,5 +1,6 @@
 .container {
-  padding: 40vh 0 0 0;
+  position: relative;
+  padding: 20vh 0 0 0;
   width: 100vw;
   height: 200vh;
   .allProjects {
@@ -27,7 +28,7 @@
         border-radius: 10px;
       }
 
-      $box-depth: 25vw;
+      $box-depth: 28vw;
 
       .box1 {
         top: 0;
