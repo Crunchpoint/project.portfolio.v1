@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Projects_list() {
   const main = useRef(null);
 
+  // console.log(main.current?.style);
+
   useEffect(() => {
     const ctx = gsap.context((self) => {
       if (undefined !== self.selector) {
@@ -26,13 +28,28 @@ export default function Projects_list() {
         //     },
         //   });
         // });`
+
+        // const perspectiveOrigin = window.getComputedStyle(main.current).getPropertyValue("perspective-origin");
+
+        // console.log(perspectiveOrigin);
+
+        gsap.to(main.current, {
+          perspectiveOrigin: "center 50%",
+          scrollTrigger: {
+            trigger: main.current,
+            start: "top 40%",
+            end: "bottom 60%",
+            scrub: true,
+          },
+        });
+
         gsap.to(".item_wrapper", {
           rotateY: -360,
           ease: "none",
           scrollTrigger: {
             trigger: ".item_wrapper",
-            start: "top 50%",
-            end: "bottom -30%",
+            start: "top 40% ",
+            end: "bottom 60%",
             scrub: true,
           },
         });
@@ -46,12 +63,12 @@ export default function Projects_list() {
       <div className={styles.allProjects} ref={main}>
         <div className={`item_wrapper ${styles.item__wrapper}`}>
           <div className={`box ${styles.box1} ${styles.box}`}>projects</div>
-          <div className={`box ${styles.box2} ${styles.box}`}>projects </div>
-          <div className={`box ${styles.box3} ${styles.box}`}>projects </div>
-          <div className={`box ${styles.box4} ${styles.box}`}>projects </div>
-          <div className={`box ${styles.box5} ${styles.box}`}>projects </div>
-          <div className={`box ${styles.box6} ${styles.box}`}>projects </div>
-          <div className={`box ${styles.box7} ${styles.box}`}>projects </div>
+          <div className={`box ${styles.box2} ${styles.box}`}>projects</div>
+          <div className={`box ${styles.box3} ${styles.box}`}>projects</div>
+          <div className={`box ${styles.box4} ${styles.box}`}>projects</div>
+          <div className={`box ${styles.box5} ${styles.box}`}>projects</div>
+          <div className={`box ${styles.box6} ${styles.box}`}>projects</div>
+          <div className={`box ${styles.box7} ${styles.box}`}>projects</div>
         </div>
       </div>
     </section>

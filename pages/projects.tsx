@@ -11,7 +11,7 @@ export default function Projects(): JSX.Element {
       <Meta title='Project' name='portfolio' description="Johnny's portfolio" />
       <Main_text text={mainText} />
       <Projects_list />
-      <Test />
+      {/* <Test /> */}
     </>
   );
 }

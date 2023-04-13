@@ -1,69 +1,76 @@
 .container {
-  position: relative;
-  padding: 20vh 0 0 0;
-  width: 100vw;
-  height: 200vh;
+  height: 100vh;
+  margin-top: 10vh;
   .allProjects {
     margin: 0 auto;
-    aspect-ratio: 1/1;
-    width: 20vw;
+    width: 375px;
+    height: 1075px;
     position: relative;
-    perspective: 1174px;
+    perspective: 1200px;
     .item__wrapper {
       height: 100%;
       width: 100%;
       position: absolute;
       transform-style: preserve-3d;
-      will-change: transform;
       .box {
+        display: block;
         position: absolute;
-        transform-origin: center;
-        width: 20vw;
-        line-height: 15vw;
-        font-size: 3em;
+        aspect-ratio: 1/1;
+        width: 100%;
+        line-height: 375px;
+        font-size: 5em;
         text-align: center;
         color: #fff;
-        opacity: 0.7;
+        opacity: 0.95;
         border-radius: 10px;
       }
-
-      $box-depth: 28vw;
-
-      .box1 {
-        top: 0;
-        transform: rotateY(0deg) translateZ($box-depth);
-        background: #ed1c24;
-      }
-      .box2 {
-        top: 100px;
-        transform: rotateY(60deg) translateZ($box-depth);
-        background: #0072bc;
-      }
-      .box3 {
-        top: 200px;
-        transform: rotateY(120deg) translateZ($box-depth);
-        background: #39b54a;
-      }
-      .box4 {
-        top: 300px;
-        transform: rotateY(180deg) translateZ($box-depth);
-        background: #f26522;
-      }
-      .box5 {
-        top: 400px;
-        transform: rotateY(240deg) translateZ($box-depth);
-        background: #630460;
-      }
-      .box6 {
-        top: 500px;
-        transform: rotateY(300deg) translateZ($box-depth);
-        background: #f7931e;
-      }
-      .box7 {
-        top: 600px;
-        transform: rotateY(360deg) translateZ($box-depth);
-        background: #00a99d;
-      }
     }
+  }
+}
+$box-depth: 525px;
+
+.box1 {
+  transform: rotateY(0deg) translateZ($box-depth);
+  background: #ed1c24;
+}
+.box2 {
+  top: 100px;
+  transform: rotateY(60deg) translateZ($box-depth);
+  background: #0072bc;
+}
+.box3 {
+  top: 200px;
+  transform: rotateY(120deg) translateZ($box-depth);
+  background: #39b54a;
+}
+.box4 {
+  top: 300px;
+  transform: rotateY(180deg) translateZ($box-depth);
+  background: #f26522;
+}
+.box5 {
+  top: 400px;
+  transform: rotateY(240deg) translateZ($box-depth);
+  background: #630460;
+}
+.box6 {
+  top: 500px;
+  transform: rotateY(300deg) translateZ($box-depth);
+  background: #8c6239;
+}
+.box7 {
+  top: 600px;
+  transform: rotateY(360deg) translateZ($box-depth);
+  background: #8c6239;
+}
+
+@media screen and (max-width: 1920px) {
+  .allProjects {
+    perspective-origin: center 17.4371%;
+  }
+}
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+  .allProjects {
+    perspective-origin: center 14.4693%;
   }
 }
