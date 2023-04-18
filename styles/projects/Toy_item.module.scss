@@ -1,0 +1,37 @@
+.list__wrapper {
+  li {
+    padding: 0px 10px 3vh;
+    &:before {
+      content: "";
+      display: block;
+      width: 50vw;
+      height: 1px;
+      background-color: #191919;
+      margin: 0 0 3vh 0;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    .items__wrapper {
+      width: 50vw;
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-size: 1.5vw;
+        color: inherit;
+        text-shadow: 0 0 10px #000;
+        color: #f5f2eb;
+      }
+      .small__projects {
+        font-weight: 600;
+      }
+      .description {
+        font-size: 1vw;
+        font-weight: 400;
+      }
+      .view__case {
+        font-size: 1vw;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -2,9 +2,10 @@ import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import Context from "@/components/context/Context";
 import { Montserrat } from "next/font/google";
-import localFont from "next/font/local";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "@/styles/globals.scss";
+
+import localFont from "next/font/local";
 
 const myFont = localFont({
   src: [

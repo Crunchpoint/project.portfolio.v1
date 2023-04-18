@@ -1,0 +1,29 @@
+.plane__wrapper {
+  position: absolute;
+  transform: translateZ(-1200px);
+  .motionPath {
+    overflow: visible;
+    height: 100%;
+    max-width: 100%;
+    position: absolute;
+  }
+  .plane {
+    a {
+      figcaption {
+        position: absolute;
+        top: -300px;
+        font-size: 10vw;
+        text-shadow: 0 0 10px #000;
+        opacity: 0;
+        color: #f5f2eb;
+        pointer-events: none;
+        &[data-complete="true"] {
+          @extend figcaption;
+          pointer-events: all;
+          transition: opacity 0.75s ease-in-out;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

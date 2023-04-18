@@ -1,0 +1,53 @@
+// // random function
+
+$num-stars: 10;
+
+.falling {
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  border-radius: 50%;
+  &::after {
+    height: 60px;
+    width: 1px;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+    background: linear-gradient(to bottom, transparent, white);
+  }
+}
+@for $i from 1 through $num-stars {
+  .stars#{$i} {
+    animation: fall-#{$i} linear random(1000) / 200 + 2s infinite random(1000) / 200 + 5s * -1;
+  }
+  @keyframes fall-#{$i} {
+    $power: random(150);
+    $keyframe: random(100);
+    $type: random(1);
+    @if $type == 1 {
+      0% {
+        transform: translate(-100%, $i * 400 / $num-stars + px) scale($power/100) rotate(45deg);
+        opacity: $power/100;
+      }
+      100% {
+        transform: translate(-440px - $i * 400 / $num-stars, 100vh) scale($power/100) rotate(45deg);
+        opacity: $power/100;
+      }
+    }
+    // @else {
+    //   0% {
+    //     transform: translate($i * 400 / $num-stars + px, -100%) scale($power/100) rotate(45deg);
+    //     opacity: $power/100;
+    //   }
+    //   100% {
+    //     transform: translate(-440px, 440px - $i * 400 / $num-stars) scale($power/100) rotate(45deg);
+    //     opacity: $power/100;
+    //   }
+    // }
+  }
+}

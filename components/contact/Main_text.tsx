@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/projects/Main_text.module.scss";
+import styles from "@/styles/contact/Main_text.module.scss";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { MyContext } from "@/components/context/Context";

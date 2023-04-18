@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Indie_Flower } from "next/font/google";
 import styles1 from "@/styles/index/Parallax_image.module.scss";
 import styles2 from "@/styles/index/Parallax_image2.module.scss";
@@ -21,8 +21,8 @@ const indie = Indie_Flower({
 
 export default function Hero_image({ image, alt, speed, translateY, item }: Hero_imageProps): JSX.Element {
   const styles = item === "styles2" ? styles2 : styles1;
-  const [isClick, setIsClick] = React.useState(false);
-  const [count, setCount] = React.useState(0);
+  const [isClick, setIsClick] = useState(false);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     isClick && setCount((count) => count + 1);

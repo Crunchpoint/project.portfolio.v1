@@ -157,10 +157,16 @@ select {
 }
 
 body:has([data-theme="/"]),
-body:has([data-theme="/projects"]) {
-  transition: background-color 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+body:has([data-theme="/projects"]),
+body:has([data-theme="/contact"]) {
+  transition: background-color 0.75s cubic-bezier(0.77, 0, 0.175, 1), background-image 0.75s cubic-bezier(0.77, 0, 0.175, 1);
   background-color: #0a0a0a;
   &:has([data-theme="/projects"]) {
-    background-color: #6dd3e7;
+    // background-color: #6dd3e7;
+    background-color: #2ac9e9;
+  }
+  &:has([data-theme="/contact"]) {
+    // background-image: linear-gradient(to bottom, #021948, #265087 40%, #4883be 80%);
+    // background: linear-gradient(to bottom, #021948, #265087 40%, #4883be 80%, #4883be 120%);
   }
 }

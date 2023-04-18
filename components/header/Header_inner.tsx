@@ -13,16 +13,15 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: "/", label: "About" },
-  // { href: "/skills", label: "Skills" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ];
 
 const socialItems: NavItem[] = [
-  { href: "https://github.com/Crunchpoint?tab=repositories", label: "Portfolio" },
-  { href: "https://github.com/Crunchpoint?tab=repositories", label: "Team project - Ghibli" },
-  { href: "https://github.com/Crunchpoint?tab=repositories", label: "Seoul Event Information" },
-  { href: "https://github.com/Crunchpoint?tab=repositories", label: "Clone Coding - Barovier" },
+  { href: "https://github.com/Crunchpoint/first_portfolio", label: "Portfolio" },
+  { href: "https://github.com/Crunchpoint/Project_B", label: "Team project - Ghibli" },
+  { href: "https://github.com/Crunchpoint/06.project_event_info", label: "Seoul Event Information" },
+  { href: "https://github.com/Crunchpoint/05.clone_Barovier", label: "Clone Coding - Barovier" },
 ];
 
 function Header_inner() {

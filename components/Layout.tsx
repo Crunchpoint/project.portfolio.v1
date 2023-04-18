@@ -16,7 +16,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <div className={styles.bg__wrapper} data-theme={router.pathname}>
         <Header />
-        {router.pathname === "/" ? <Stars /> : router.pathname === "/projects" ? <Sky /> : null}
+        {router.pathname === "/" ? <Stars /> : router.pathname === "/projects" ? <Sky /> : router.pathname === "/contact" ? <Stars /> : null}
         <main className={styles.container}>{children}</main>
         <Footer />
       </div>
