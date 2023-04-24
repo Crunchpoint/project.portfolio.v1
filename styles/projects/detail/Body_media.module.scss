@@ -1,0 +1,15 @@
+.media {
+  padding: 12.5vw 0vw 0vw;
+  width: 75vw;
+  margin: 4.1666666667vw auto;
+  .media__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .video {
+      border-radius: 5px;
+      background-color: black;
+      padding: 1rem;
+    }
+  }
+}

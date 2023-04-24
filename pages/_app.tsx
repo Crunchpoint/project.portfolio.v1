@@ -27,13 +27,6 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-// it can be used in return like this:
-/* <style jsx global>{`
-        html {
-          font-family: ${montserrat.style.fontFamily};
-        }
-      `}</style> */
-
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <Context>

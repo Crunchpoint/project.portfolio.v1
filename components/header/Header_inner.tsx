@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
 
 const socialItems: NavItem[] = [
   { href: "https://github.com/Crunchpoint/first_portfolio", label: "Portfolio" },
-  { href: "https://github.com/Crunchpoint/Project_B", label: "Team project - Ghibli" },
+  { href: "https://github.com/Crunchpoint/Project_B", label: "Ghibli" },
   { href: "https://github.com/Crunchpoint/06.project_event_info", label: "Seoul Event Information" },
   { href: "https://github.com/Crunchpoint/05.clone_Barovier", label: "Clone Coding - Barovier" },
 ];
@@ -59,7 +59,7 @@ function Header_inner() {
           {socialItems.map((item, key) => (
             <motion.li key={item.label} className={styles.social__item}>
               <motion.div className={styles.text__container} animate={isOpen ? "closed2" : "open2"} variants={variants} custom={key}>
-                <Link href={item.href} onClick={() => setIsOpen(!isOpen)}>
+                <Link href={item.href} onClick={() => setIsOpen(!isOpen)} target='_blank'>
                   <span data-text={item.label}>{item.label}</span>
                 </Link>
               </motion.div>

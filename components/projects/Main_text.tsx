@@ -16,8 +16,8 @@ export default function Main_text({ text }: Main_textProps): JSX.Element {
   let cumulativeDelay = 0;
 
   return (
-    <Parallax speed={20} easing={"easeInOut"} className={styles.text__container}>
-      <section className={styles.text__wrapper}>
+    <section className={styles.text__container}>
+      <Parallax speed={20} easing={"easeInOut"} className={styles.text__wrapper}>
         {words.map((word, index) => {
           return (
             <span key={index} className={styles.text__wrapper__span}>
@@ -38,7 +38,7 @@ export default function Main_text({ text }: Main_textProps): JSX.Element {
             </span>
           );
         })}
-      </section>
-    </Parallax>
+      </Parallax>
+    </section>
   );
 }

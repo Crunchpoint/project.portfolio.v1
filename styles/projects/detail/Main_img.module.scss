@@ -1,0 +1,23 @@
+.head__image {
+  clip-path: inset(-100vh 0 100vh 0);
+  padding-bottom: 200vh;
+  margin-bottom: -100vh;
+  &[data-ready="true"] {
+    position: relative;
+  }
+  &[data-ready="true"] img {
+    position: sticky;
+  }
+  .image__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    img {
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

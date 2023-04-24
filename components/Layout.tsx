@@ -2,6 +2,7 @@ import styles from "@/styles/Layout.module.scss";
 import Header from "./header/Header";
 import Stars from "./Star";
 import Sky from "./Sky";
+import Room from "./Room";
 import Footer from "./footer/Footer";
 import { useRouter } from "next/router";
 
@@ -16,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <div className={styles.bg__wrapper} data-theme={router.pathname}>
         <Header />
-        {router.pathname === "/" ? <Stars /> : router.pathname === "/projects" ? <Sky /> : router.pathname === "/contact" ? <Stars /> : null}
+        {router.pathname === "/" ? <Stars /> : router.pathname === "/projects" ? <Sky /> : router.pathname === "/contact" ? <Room /> : null}
         <main className={styles.container}>{children}</main>
         <Footer />
       </div>

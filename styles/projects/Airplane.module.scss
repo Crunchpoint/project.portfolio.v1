@@ -1,6 +1,7 @@
 .plane__wrapper {
   position: absolute;
   transform: translateZ(-1200px);
+  padding: 8.3333333333vw 0 0;
   .motionPath {
     overflow: visible;
     height: 100%;
@@ -10,6 +11,7 @@
   .plane {
     a {
       figcaption {
+        white-space: nowrap;
         position: absolute;
         top: -300px;
         font-size: 10vw;

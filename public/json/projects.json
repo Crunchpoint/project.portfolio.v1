@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Barovier",
+      "sort": "Personal Project",
+      "img": "/img/projects/baro2.jpg",
+      "alt": "project1",
+      "className": "box1",
+      "link": "/projects/detail/barovier",
+      "href": "https://crunchpoint.github.io/05.clone_Barovier/",
+      "video": "/video/baro.mp4",
+      "color": "#87A3D1",
+      "tool": ["/img/projects/detail/html.png", "/img/projects/detail/css.png", "/img/projects/detail/js.png"],
+      "description": "Executing the initial clone coding project as a front-end developer, the Barovier & Toso website was replicated with meticulous attention to detail, showcasing precise and accurate development practices."
+    },
+    {
+      "id": 2,
+      "title": "Eclipse",
+      "sort": "Personal Project",
+      "img": "/img/projects/eclipse2.jpg",
+      "alt": "project2",
+      "className": "box2",
+      "link": "/projects/detail/eclipse",
+      "href": "https://inhoopark.github.io/C_Team/",
+      "video": "/video/eclipse.mp4",
+      "color": "#024198",
+      "tool": ["/img/projects/detail/html.png", "/img/projects/detail/scss.png", "/img/projects/detail/js.png"],
+      "description": "Collaborating with a team of two, I contributed to the development of this project by creating the story page and other key features using HTML, SCSS, and JavaScript."
+    },
+    {
+      "id": 3,
+      "title": "Seoul Event",
+      "sort": "Personal Project",
+      "img": "/img/projects/event2.jpg",
+      "alt": "project3",
+      "className": "box3",
+      "link": "/projects/detail/seoulevent",
+      "href": "http://crunchpoint.xyz/",
+      "video": "/video/event.mp4",
+      "color": "#232325",
+      "tool": ["/img/projects/detail/scss.png", "/img/projects/detail/react.png"],
+      "description": "Developed with React.js and SCSS, this project offers a user-friendly guide to cultural events in Seoul, including movies, concerts, musicals, and more."
+    },
+    {
+      "id": 4,
+      "title": "Ghibli",
+      "sort": "Personal Project",
+      "img": "/img/projects/ghibli2.jpg",
+      "alt": "project4",
+      "className": "box4",
+      "link": "/projects/detail/ghibli",
+      "href": "https://project-b-red.vercel.app/",
+      "video": "/video/ghibli.mp4",
+      "color": "#2c7c67",
+      "tool": ["/img/projects/detail/scss.png", "/img/projects/detail/next.png"],
+      "description": "Developed by a team of two, this Ghibli fan site includes social media and animation information features, leveraging a mySQL database to create an immersive experience for fans of the beloved Japanese animation studio."
+    },
+    {
+      "id": 5,
+      "title": "Portfolio",
+      "sort": "Personal Project",
+      "img": "/img/projects/portfolio.jpg",
+      "alt": "project5",
+      "className": "box5",
+      "link": "/projects/detail/portfolio",
+      "href": "https://first-portfolio-five.vercel.app/",
+      "video": "/video/portfolio.mp4",
+      "color": "#191919",
+      "tool": ["/img/projects/detail/scss.png", "/img/projects/detail/next.png", "/img/projects/detail/ts.png"],
+      "description": "I created my personal portfolio website with SCSS, Next.js and TypeScript, focusing on design to create a visually appealing and user-friendly (and dare I say, slightly humorous) experience."
+    },
+    {
+      "id": 6,
+      "title": "Stay tuned for more projects",
+      "img": "/img/projects/stay.jpg",
+      "alt": "project6",
+      "className": "box6",
+      "link": "",
+      "href": "",
+      "video": "",
+      "color": "",
+      "tool": [],
+      "description": ""
+    },
+    {
+      "id": 7,
+      "title": "Stay tuned for more projects",
+      "img": "/img/projects/stay.jpg",
+      "alt": "project7",
+      "className": "box7",
+      "link": "",
+      "href": "",
+      "video": "",
+      "color": "",
+      "tool": [],
+      "description": ""
+    }
+  ]
+}

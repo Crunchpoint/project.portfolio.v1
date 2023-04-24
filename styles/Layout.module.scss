@@ -1,8 +1,13 @@
 .bg__wrapper {
-  overflow: hidden;
-  .container {
-    padding: 8.3333333333vw 0 0;
-    position: relative;
-    width: 100vw;
+  &[data-theme="/projects"] {
+    overflow: hidden;
   }
+  &[data-theme*="/projects/detail"] .container {
+    padding: 0;
+  }
+}
+.container {
+  padding: 8.3333333333vw 0 0;
+  position: relative;
+  width: 100vw;
 }

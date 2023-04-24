@@ -8,7 +8,7 @@ import EarthImg from "@/public/img/index/earth2.webp";
 import Rocket from "@/components/index/Rocket";
 
 export default function Home(): JSX.Element {
-  const mainText = "Hello!  \nI am JiHoon.  \nWelcome to my world!";
+  const mainText = "Hello!  \nI am JiHoon  \nWelcome to my world!";
 
   return (
     <>

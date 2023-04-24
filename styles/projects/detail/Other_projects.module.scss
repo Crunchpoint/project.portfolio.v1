@@ -1,0 +1,23 @@
+.toy {
+  position: relative;
+  padding: 30vh 6vw 0;
+  z-index: 1;
+  .title {
+    font-size: 5vw;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #000;
+    color: #f5f2eb;
+    span {
+      font-size: 1.25vw;
+      transition: color 0.25s;
+      &:hover {
+        cursor: pointer;
+        color: rgb(141, 48, 195);
+      }
+    }
+  }
+  .list {
+    width: max-content;
+  }
+}

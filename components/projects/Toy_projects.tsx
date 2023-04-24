@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ToyImg_1 from "@/public/img/projects/baro2.jpg";
 import ToyImg_2 from "@/public/img/projects/event2.jpg";
 import ToyImg_3 from "@/public/img/projects/ghibli2.jpg";
+import ToyN from "@/public/img/projects/stay.jpg";
 import Toy_item from "./Toy_item";
 
 const indie = Indie_Flower({
@@ -18,19 +19,19 @@ export default function Toy_projects(): JSX.Element {
       title: "upcoming update! ",
       description: "description",
       view_case: "view case",
-      image: ToyImg_1,
+      image: ToyN,
     },
     {
       title: "upcoming update! ",
       description: "description",
       view_case: "view case",
-      image: ToyImg_2,
+      image: ToyN,
     },
     {
       title: "upcoming update! ",
       description: "description",
       view_case: "view case",
-      image: ToyImg_3,
+      image: ToyN,
     },
   ];
 

@@ -1,6 +1,9 @@
 .among {
   position: absolute;
-  top: 50%;
+  width: 100vw;
+  height: 50vh;
+  top: 45%;
+  overflow: hidden;
   figure {
     width: 2vw;
     img {
@@ -18,11 +21,11 @@
     transform: rotate(0deg);
   }
   80% {
-    translate: 102vw -30vh;
+    translate: 102vw 40vh;
     transform: rotate(720deg);
   }
   100% {
-    translate: 102vw -30vh;
+    translate: 102vw 40vh;
     transform: rotate(720deg);
   }
 }
