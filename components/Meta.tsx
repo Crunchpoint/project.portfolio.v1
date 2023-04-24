@@ -11,7 +11,7 @@ export default function Meta({ title, name, description }: MetaProps) {
     <Head>
       <title>{title}</title>
       <meta name={name} content={description} />
-      <link rel='icon' href='/src/favicon.ico' />
+      <link rel='icon' type='image/png' href='/img/favicon.ico' sizes='32x32' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
     </Head>
   );
