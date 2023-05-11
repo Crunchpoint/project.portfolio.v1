@@ -35,8 +35,8 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
     return () => clearTimeout(tiemeOut);
   }, [isClick]);
 
-  function isMultipleOfFive(count: number) {
-    return count % 5 === 0 && count !== 0;
+  function isMultipleOfThree(count: number) {
+    return count % 3 === 0 && count !== 0;
   }
 
   return (
@@ -58,7 +58,7 @@ export default function Hero_image({ image, alt, speed, translateY, item }: Hero
                   />
                 </g>
               </svg>
-              {isMultipleOfFive(count) ? (
+              {isMultipleOfThree(count) ? (
                 <figcaption className={indie.className}>aghhh! &nbsp;&nbsp;&nbsp;&nbsp;</figcaption>
               ) : isClick ? (
                 <figcaption className={indie.className}>wooooahhh~!</figcaption>

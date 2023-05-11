@@ -11,7 +11,7 @@
       filter: drop-shadow(0 0 0.2rem #fff);
     }
     @for $i from 1 through 100 {
-      $multiple: $i * 5;
+      $multiple: $i * 3;
       &[data-count="#{$multiple}"] {
         animation: play 0.9s steps(1, end) 1;
       }
@@ -96,7 +96,6 @@
 }
 @keyframes play {
   0% {
-    // background: url("../../public/img/index/boom.gif") no-repeat center center / cover;
     background: url("../../public/img/index/boom.gif") no-repeat center center / cover;
   }
   100% {

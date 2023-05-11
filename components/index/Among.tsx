@@ -24,7 +24,7 @@ export default function Among(): JSX.Element {
       }
     }, 30000);
     return () => {
-      console.log("among us component unmounted");
+      // console.log("among us component unmounted");
       clearInterval(timer);
     };
   }, []);
