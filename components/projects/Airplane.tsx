@@ -68,7 +68,7 @@ export default function Test() {
         <path id='path' className={styles.path} fill='none' d='M8,102 C15,83 58,25 131,24 206,24 233,63 259,91 292,125 328,155 377,155 464,155 497,97 504,74' />
       </svg>
       <figure className={`airplane ${styles.plane}`}>
-        <Link href='/contact'>
+        <Link href='mailto:mycoside@gmail.com'>
           <figcaption className={indie.className} data-complete={isMounted}>
             Contact Me!
           </figcaption>
