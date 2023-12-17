@@ -14,7 +14,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { href: "/", label: "About" },
   { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/contact", label: "Contact" },
 ];
 
 const socialItems: NavItem[] = [
